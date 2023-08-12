@@ -35,6 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         options.autoTrackEventType = [.eventTypeAppClick,.eventTypeAppStart,.eventTypeAppEnd,.eventTypeAppViewScreen]
         options.enableVisualizedAutoTrack = true
         options.enableHeatMap = true
+        options.enableTrackAppCrash = true
         SensorsAnalyticsSDK.start(configOptions: options)
 
         SensorsAnalyticsSDK.sharedInstance()?.setFlushNetworkPolicy(SensorsAnalyticsNetworkType.typeALL)

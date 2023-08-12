@@ -132,7 +132,8 @@ NSSet* sensorsdata_reserved_properties() {
 }
 
 BOOL sensorsdata_is_same_queue(dispatch_queue_t queue) {
-    return strcmp(dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL), dispatch_queue_get_label(queue)) == 0;
+    return strcmp(
+                  dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL), dispatch_queue_get_label(queue)) == 0;
 }
 
 void sensorsdata_dispatch_safe_sync(dispatch_queue_t queue,DISPATCH_NOESCAPE dispatch_block_t block) {

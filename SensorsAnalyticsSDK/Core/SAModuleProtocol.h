@@ -35,9 +35,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign, getter=isEnable) BOOL enable;
 @property (nonatomic, strong) SAConfigOptions *configOptions;
+
 + (instancetype)defaultManager;
 
 @optional
+
 - (void)updateServerURL:(NSString *)serverURL;
 
 @end

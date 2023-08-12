@@ -997,6 +997,7 @@ NSString * const SensorsAnalyticsIdentityKeyEmail = @"$identity_email";
     if (!object.hybridH5 && eventName) {
         object.isInstantEvent = [self.configOptions.instantEvents containsObject:eventName];
     }
+    
     SAFlowData *input = [[SAFlowData alloc] init];
     input.eventObject = object;
     input.identifier = self.identifier;
